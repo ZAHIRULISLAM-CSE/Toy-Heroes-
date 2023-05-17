@@ -37,13 +37,9 @@ const AuthProviders = ({children}) => {
    },[])
 
 
-
-
     const shareFun={
         creatUserWithEmailPassword,signInWithEp,signInWithGoogle,user
     }
-
-
 
 
     return (
