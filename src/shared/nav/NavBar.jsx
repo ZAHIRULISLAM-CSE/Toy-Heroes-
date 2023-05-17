@@ -4,21 +4,15 @@ import logo from "/images/icon.png";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const NavBar = () => {
-  const { user,logOut } = useContext(AuthContext);
-  console.log(user)
+  const { user, logOut } = useContext(AuthContext);
 
   //signOut
-    const handleSignOut=()=>{
-        logOut()
-        .then(() => {
-          }).catch((error) => {
-          });
-    }
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {});
+  };
 
-
-
-
-  
   return (
     <div>
       <nav className="bg-black p-8 text-white py-5">
@@ -73,7 +67,7 @@ const NavBar = () => {
                     className="block py-2 pl-3 pr-4 text-white md:p-0"
                     aria-current="page"
                   >
-                  All Toys
+                    All Toys
                   </Link>
                 </li>
                 <li>
@@ -103,18 +97,32 @@ const NavBar = () => {
                     Blogs
                   </Link>
                 </li>
-                <img  className="h-8 rounded-xl w-8 " src={user.photoURL} alt="" />
-                <button onClick={handleSignOut} >SignOut</button>
+                <div className="group flex relative">
+                  <span>
+                    <img
+                      className="h-8 w-8 rounded-full"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  </span>
+                  <span
+                    className="group-hover:opacity-100 transition-opacity bg-violet-600 px-1 text-xs text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto"
+                  >
+                    {user.displayName}
+                  </span>
+                </div>
+                <button onClick={handleSignOut}>SignOut</button>
               </ul>
             ) : (
               <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                 <li>
+                <li>
                   <Link
                     to="/"
                     className="block py-2 pl-3 pr-4 text-white md:p-0"
                     aria-current="page"
                   >
-                   Home
+                    Home
                   </Link>
                 </li>
                 <li>
@@ -123,25 +131,25 @@ const NavBar = () => {
                     className="block py-2 pl-3 pr-4 text-white md:p-0"
                     aria-current="page"
                   >
-                  All Toys
+                    All Toys
                   </Link>
                 </li>
                 <li>
-              <Link
-                to="/login"
-                className="block py-2 pl-3 pr-4 text-white md:p-0"
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/register"
-                className="block py-2 pl-3 pr-4 text-white md:p-0"
-              >
-                Registration
-              </Link>
-            </li>
+                  <Link
+                    to="/login"
+                    className="block py-2 pl-3 pr-4 text-white md:p-0"
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/register"
+                    className="block py-2 pl-3 pr-4 text-white md:p-0"
+                  >
+                    Registration
+                  </Link>
+                </li>
               </ul>
             )}
           </div>
