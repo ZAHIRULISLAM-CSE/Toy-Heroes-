@@ -30,7 +30,7 @@ const Register = () => {
             setError(null);
             const user = userCredential.user;
             console.log(user);
-            navigate("/")
+            navigate("/login")
             
           })
           .catch((error) => {

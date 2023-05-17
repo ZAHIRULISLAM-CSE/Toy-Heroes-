@@ -1,14 +1,27 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate, useNavigation } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProviders";
+import { BsFillExclamationDiamondFill } from "react-icons/bs";
 
 const Login = () => {
     const [error,setError]=useState(null);
+    const {signInWithEp}=useContext(AuthContext)
+    const navigate=useNavigate();
 
     const handleLogin=(event)=>{
             event.preventDefault();
             const email=event.target.email.value;
             const password=event.target.password.value;
-            console.log(email,password)
+
+
+            signInWithEp(email,password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                navigate("/")
+              })
+              .catch((error) => {
+                setError("Please Provide Valid Email and Password")
+              })
     }
 
   return (
