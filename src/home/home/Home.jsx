@@ -1,10 +1,10 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import Banner from '../banner/Banner1';
 
 const Home = () => {
     return (
         <div>
-            <h1>okk</h1>
+           <Banner></Banner>
         </div>
     );
 };
