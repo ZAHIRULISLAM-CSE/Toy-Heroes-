@@ -4,7 +4,21 @@ import logo from "/images/icon.png";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const NavBar = () => {
-  const { user } = useContext(AuthContext);
+  const { user,logOut } = useContext(AuthContext);
+  console.log(user)
+
+  //signOut
+    const handleSignOut=()=>{
+        logOut()
+        .then(() => {
+          }).catch((error) => {
+          });
+    }
+
+
+
+
+  
   return (
     <div>
       <nav className="bg-black p-8 text-white py-5">
@@ -89,7 +103,8 @@ const NavBar = () => {
                     Blogs
                   </Link>
                 </li>
-                <button>SignOut</button>
+                <img  className="h-8 rounded-xl w-8 " src={user.photoURL} alt="" />
+                <button onClick={handleSignOut} >SignOut</button>
               </ul>
             ) : (
               <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
