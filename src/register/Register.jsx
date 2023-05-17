@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
     const [error,setError]=useState(null);
@@ -26,19 +27,26 @@ const Register = () => {
 
 
         creatUserWithEmailPassword(email,password)
-        .then((userCredential) => {
+        .then((user) => {
+            update(user,name,photo);
             setError(null);
-            const user = userCredential.user;
-            console.log(user);
-            navigate("/login")
-            
+            navigate("/login")  
           })
           .catch((error) => {
             const errorMessage = error.message;
             setError(errorMessage);
+            console.log(errorMessage)
           })
         
     }
+
+    const update=(user,name,photo)=>{
+        updateProfile(user.user, {
+          displayName:name, photoURL:photo
+        }).then(() => {
+        }).catch((error) => {
+        });
+      }
 
   return (
     <div>
