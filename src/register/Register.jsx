@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const [error,setError]=useState(null);
     const {creatUserWithEmailPassword}=useContext(AuthContext);
+    const navigate=useNavigate();
     const handleSubmit=(event)=>{
         event.preventDefault();
         const name=event.target.name.value;
@@ -20,17 +22,20 @@ const Register = () => {
         if(password.length < 6){
             setError('Password Length must be minimum 6 character.');
             return;
-          }
+        }
+
 
         creatUserWithEmailPassword(email,password)
         .then((userCredential) => {
             setError(null);
             const user = userCredential.user;
             console.log(user);
+            navigate("/")
+            
           })
           .catch((error) => {
             const errorMessage = error.message;
-            console.log(errorMessage);
+            setError(errorMessage);
           })
         
     }
