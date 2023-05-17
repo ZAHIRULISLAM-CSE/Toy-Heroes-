@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 const Register = () => {
+    const [error,setError]=useState(null);
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        const name=event.target.name.value;
+        const email=event.target.email.value;
+        const password=event.target.password.value;
+        const photo=event.target.photo.value;
+        console.log(name,email,password,photo);
+    }
+
   return (
     <div>
-      <form className="w-1/2 mt-12 mx-auto">
+      <form onSubmit={handleSubmit} className="w-1/2 mt-12 mx-auto">
         <div className="mb-6 ">
           <label
             htmlFor="name"
@@ -40,9 +50,23 @@ const Register = () => {
           Your  Password
           </label>
           <input
-            type="password"
+            type="photo"
             id="password"
             name="password"
+            className="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="photo"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+          Your  Photo Url
+          </label>
+          <input
+            type="text"
+            id="photo"
+            name="photo"
             className="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
@@ -55,6 +79,6 @@ const Register = () => {
       </form>
     </div>
   );
-};
+}
 
 export default Register;
