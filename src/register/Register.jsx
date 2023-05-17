@@ -1,14 +1,38 @@
 import React, { useContext, useState } from "react";
+import { AuthContext } from "../providers/AuthProviders";
+import { BsFillExclamationDiamondFill } from "react-icons/bs";
 
 const Register = () => {
     const [error,setError]=useState(null);
+    const {creatUserWithEmailPassword}=useContext(AuthContext);
     const handleSubmit=(event)=>{
         event.preventDefault();
         const name=event.target.name.value;
         const email=event.target.email.value;
         const password=event.target.password.value;
         const photo=event.target.photo.value;
-        console.log(name,email,password,photo);
+
+        if(name.length==0 || email.length==0 || password.length==0 || photo.length==0 ){
+            setError('Unsuccessfull,Provide all the input field value and try again.');
+            return;
+        }
+
+        if(password.length < 6){
+            setError('Password Length must be minimum 6 character.');
+            return;
+          }
+
+        creatUserWithEmailPassword(email,password)
+        .then((userCredential) => {
+            setError(null);
+            const user = userCredential.user;
+            console.log(user);
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          })
+        
     }
 
   return (
@@ -76,6 +100,12 @@ const Register = () => {
         >
           Submit
         </button>
+        {
+            error ? <div className="mt-4 flex items-center gap-3">
+            <BsFillExclamationDiamondFill className="text-red-600"></BsFillExclamationDiamondFill>
+            <p className=" text-sm  md:text-xl lg:text-2xl text-rose-700">{error}</p>
+            </div> : ""
+        }
       </form>
     </div>
   );
