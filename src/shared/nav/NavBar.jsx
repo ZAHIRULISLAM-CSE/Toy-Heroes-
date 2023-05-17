@@ -5,9 +5,9 @@ import logo from "/images/icon.png"
 const NavBar = () => {
   return (
     <div>
-      <nav className="bg-white mt-8 border-gray-200">
+      <nav className="bg-black p-8 text-white py-5">
         <div className="flex flex-wrap items-center justify-between mx-auto">
-          <a href="https://flowbite.com/" className="flex items-center">
+          <Link to='/' className="flex items-center">
             <img
               src={logo}
               className="h-8 mr-3"
@@ -16,7 +16,7 @@ const NavBar = () => {
             <span className="self-center text- text-2xl font-semibold whitespace-nowrap dark:text-white">
               Toy <span className="text-pink-600">H</span ><span className="text-red-600">E</span><span className="text-orange-600">R</span ><span className="text-yellow-400" >O</span><span className="text-lime-600">S</span>
             </span>
-          </a>
+          </Link>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -40,11 +40,11 @@ const NavBar = () => {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <Link
                 to='/'
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                  className="block py-2 pl-3 pr-4 text-white md:p-0"
                   aria-current="page"
                 >
                   Home
@@ -53,23 +53,23 @@ const NavBar = () => {
               <li>
                 <Link
                 to='/login'
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-white md:p-0"
                 >
                   Login
                 </Link>
               </li>
               <li>
                 <Link
-                to='/blog'
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                to='/register'
+                  className="block py-2 pl-3 pr-4 text-white md:p-0"
                 >
-                Blog
+                Registration
                 </Link>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-white md:p-0"
                 >
                   Pricing
                 </a>
@@ -77,7 +77,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-white md:p-0"
                 >
                   Contact
                 </a>
@@ -86,7 +86,6 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <h1>okkkk</h1>
     </div>
   );
 };
