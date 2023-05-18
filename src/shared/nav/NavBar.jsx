@@ -24,7 +24,7 @@ const NavBar = () => {
               <span className="text-red-600">E</span>
               <span className="text-orange-600">R</span>
               <span className="text-yellow-400">O</span>
-              <span className="text-lime-600">S</span>
+              <span className="text-lime-400">S</span>
             </span>
           </Link>
           <button
