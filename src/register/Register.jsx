@@ -6,7 +6,7 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
     const [error,setError]=useState(null);
-    const {creatUserWithEmailPassword}=useContext(AuthContext);
+    const {creatUserWithEmailPassword,logOut}=useContext(AuthContext);
     const navigate=useNavigate();
     const handleSubmit=(event)=>{
         event.preventDefault();
@@ -30,6 +30,7 @@ const Register = () => {
         .then((user) => {
             update(user,name,photo);
             setError(null);
+            logOut()
             navigate("/login")  
           })
           .catch((error) => {

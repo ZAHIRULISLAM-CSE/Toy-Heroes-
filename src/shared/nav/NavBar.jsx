@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "/images/icon.png";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const navigate=useNavigate();
 
   //signOut
   const handleSignOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => {
+        navigate("/")
+      })
       .catch((error) => {});
   };
 
