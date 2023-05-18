@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
+import Swal from 'sweetalert2'
 import { AuthContext } from "../providers/AuthProviders";
 
 const AddToys = () => {
   const [selectedOption, setSelectedOption] = useState("Avengers");
+
 
   const { user } = useContext(AuthContext);
 
@@ -22,6 +24,14 @@ const AddToys = () => {
         toyName,toyPhoto,sellerName,toyCatagory,sellerEmail,toyPrice,toyRatings,toyQuantity,toyDescription 
      }
 
+     if(toyName.length ==0 || toyPhoto.length ==0 ||  toyCatagory.length ==0 || toyPrice.length ==0 ||  toyRatings.length==0 || toyQuantity.length == 0  || toyDescription.length==0 ){
+        return Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Provide All required input field values!',
+          })
+     }
+
     fetch('http://localhost:5000/addtoys',{
         method:"POST",
         headers:{
@@ -31,10 +41,16 @@ const AddToys = () => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        const id =parseInt(data.insertedId)
+        if(id>0){
+            event.target.reset();
+            Swal.fire({
+                icon: 'success',
+                title: 'Successfull',
+                text: 'Your toy has been Added',
+              })
+        }
     })
-
-
 
   }
   
@@ -50,7 +66,7 @@ const AddToys = () => {
             <label
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Toy Name
+              Toy Name*
             </label>
             <input
              name="toyName"
@@ -64,7 +80,7 @@ const AddToys = () => {
             <label
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Toy Photo Url
+              Toy Photo Url*
             </label>
             <input
               name="toyPhoto"
@@ -75,7 +91,7 @@ const AddToys = () => {
           {/*  */}
           <div className=" mb-4 lg:mb-6">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Seller Name
+              Seller Name*
             </label>
             <input
               type="text"
@@ -87,7 +103,7 @@ const AddToys = () => {
           {/*  */}
           <div className=" mb-4 lg:mb-6">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Seller Email
+              Seller Email*
             </label>
             <input
               type="text"
@@ -101,7 +117,7 @@ const AddToys = () => {
             <label
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Toy Catagory
+              Toy Catagory*
             </label>
             <select
             className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
@@ -118,7 +134,7 @@ const AddToys = () => {
             <label
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Toy Price
+              Toy Price*
             </label>
             <input
               name="toyPrice"
@@ -131,7 +147,7 @@ const AddToys = () => {
           
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Toy Ratings
+              Toy Ratings*
             </label>
             <input
                 name="toyRatings"
@@ -144,7 +160,7 @@ const AddToys = () => {
               
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Avaliable Quantity
+              Avaliable Quantity*
             </label>
             <input
             name="toyQuantity"
@@ -156,7 +172,7 @@ const AddToys = () => {
             <label
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-            Description
+            Description*
             </label>
             <input
              name="toyDescription"
