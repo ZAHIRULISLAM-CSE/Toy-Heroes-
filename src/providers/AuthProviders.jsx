@@ -8,6 +8,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 const AuthProviders = ({children}) => {
     const auth = getAuth(app);
     const [user,setUser]=useState(null);
+    const [loading,setLoading]=useState(true);
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -35,6 +36,7 @@ const AuthProviders = ({children}) => {
    useEffect(()=>{
      const unSubscribe=onAuthStateChanged(auth, (loggedUser) => {
             setUser(loggedUser)
+            setLoading(false)
        });
        return ()=>{
         unSubscribe();
@@ -43,7 +45,7 @@ const AuthProviders = ({children}) => {
 
 
     const shareFun={
-        creatUserWithEmailPassword,signInWithEp,signInWithGoogle,user,logOut
+        creatUserWithEmailPassword,signInWithEp,signInWithGoogle,user,logOut,loading
     }
 
 
