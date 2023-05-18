@@ -6,7 +6,7 @@ const Galaries = () => {
   return (
     <div className="w-[85%] mx-auto">
       <h1 className="text-center font-bold text-4xl mt-16">Gallery</h1>
-      <div className="mt-12 gap-6 grid grid-cols-3">
+      <div className="mt-12 gap-6 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
         <div class="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
             <img
               class="h-72"
