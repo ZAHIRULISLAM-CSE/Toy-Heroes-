@@ -5,6 +5,7 @@ import Register from '../register/Register';
 import Home from '../home/home/Home';
 import Login from '../login/Login';
 import AddToys from '../addToy/AddToys';
+import AllToys from '../alltoys/AllToys';
 
   const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ import AddToys from '../addToy/AddToys';
         {
           path: "/addtoys",
           element:<AddToys></AddToys>
+        },
+        {
+          path: "/alltoys",
+          element:<AllToys></AllToys>
         },
       ]
     },
