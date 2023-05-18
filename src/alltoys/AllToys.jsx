@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
@@ -131,9 +132,11 @@ const AllToys = () => {
                     <td className="px-6 py-4">{singleToy.toyPrice}</td>
                     <td className="px-6 py-4">{singleToy.toyQuantity}</td>
                     <td>
+                      <Link to={`/toy/${singleToy._id}`}>
                       <button className="bg-blue-600 font-sm lg:font-normal p-1 lg:px-3 lg:py-1 rounded-xl text-lg font-semibold text-white ">
                         View Details
                       </button>
+                      </Link>
                     </td>
                   </tr>
                 ))}

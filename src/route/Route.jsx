@@ -6,6 +6,7 @@ import Home from '../home/home/Home';
 import Login from '../login/Login';
 import AddToys from '../addToy/AddToys';
 import AllToys from '../alltoys/AllToys';
+import SingleToyPage from '../singleToy/SingleToyPage';
 
   const router = createBrowserRouter([
     {
@@ -31,6 +32,11 @@ import AllToys from '../alltoys/AllToys';
         {
           path: "/alltoys",
           element:<AllToys></AllToys>
+        },
+        {
+          path: "/toy/:id",
+          element:<SingleToyPage></SingleToyPage>,
+          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
         },
       ]
     },
