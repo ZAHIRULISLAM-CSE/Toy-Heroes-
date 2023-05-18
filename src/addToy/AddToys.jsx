@@ -2,13 +2,40 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 
 const AddToys = () => {
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState("Avengers");
 
   const { user } = useContext(AuthContext);
 
 
   const handleAddToys=(event)=>{
-            
+    event.preventDefault();
+    const toyName=event.target.toyName.value;
+    const toyPhoto=event.target.toyPhoto.value;
+    const sellerName=user?.displayName;
+    const sellerEmail=user?.email;
+    const toyCatagory=selectedOption;
+    const toyPrice=event.target.toyPrice.value;
+    const toyRatings=event.target.toyRatings.value
+    const toyQuantity=event.target.toyQuantity.value;
+    const toyDescription=event.target.toyDescription.value;
+    const addedToy={
+        toyName,toyPhoto,sellerName,toyCatagory,sellerEmail,toyPrice,toyRatings,toyQuantity,toyDescription 
+     }
+
+    fetch('http://localhost:5000/addtoys',{
+        method:"POST",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify(addedToy)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+    })
+
+
+
   }
   
 
@@ -26,7 +53,7 @@ const AddToys = () => {
               Toy Name
             </label>
             <input
-             name="toy-name"
+             name="toyName"
               type="text"
               id="toy-name"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
@@ -40,7 +67,7 @@ const AddToys = () => {
               Toy Photo Url
             </label>
             <input
-              name="toy-photo"
+              name="toyPhoto"
               type="text"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
@@ -72,7 +99,6 @@ const AddToys = () => {
           {/*  */}
           <div className=" mb-4 lg:mb-6">
             <label
-              name="toy-photo"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Toy Catagory
@@ -82,9 +108,9 @@ const AddToys = () => {
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
             >
-              <option value="option1">Avengers</option>
-              <option value="option2">Star Wars</option>
-              <option value="option3">Transformars</option>
+              <option value="Avengers">Avengers</option>
+              <option value="Star Wars">Star Wars</option>
+              <option value="Transformars">Transformars</option>
             </select>
           </div>
           {/*  */}
@@ -95,7 +121,7 @@ const AddToys = () => {
               Toy Price
             </label>
             <input
-              name="toy-price"
+              name="toyPrice"
               type="text"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
@@ -108,7 +134,7 @@ const AddToys = () => {
               Toy Ratings
             </label>
             <input
-                name="toy-ratings"
+                name="toyRatings"
               type="text"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
@@ -121,7 +147,7 @@ const AddToys = () => {
               Avaliable Quantity
             </label>
             <input
-            name="toy-quantity"
+            name="toyQuantity"
               type="text"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
@@ -133,14 +159,13 @@ const AddToys = () => {
             Description
             </label>
             <input
-             name="toy-description"
+             name="toyDescription"
               type="text"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
           </div>
-          
-
         </div>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
       </form>
     </div>
   );
