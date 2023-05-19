@@ -1,22 +1,17 @@
+import { Carousel } from "flowbite-react";
 import React from "react";
 
 const Galaries = () => {
-
-
   return (
     <div className="w-[85%] mx-auto">
       <h1 className="text-center font-bold text-4xl mt-16">Gallery</h1>
       <div className="mt-12 gap-6 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
         <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
-            <img
-              className="h-72"
-              src="/images/ironman.jpg"
-              alt="product image"
-            />
+          <img className="h-72" src="/images/ironman.jpg" alt="product image" />
           <div className="px-5 pb-5">
-              <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-                 Iron Man Toy
-              </h5>
+            <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
+              Iron Man Toy
+            </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
@@ -76,9 +71,7 @@ const Galaries = () => {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 $99
               </span>
-              <button
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Buy Now
               </button>
             </div>
@@ -86,15 +79,15 @@ const Galaries = () => {
         </div>
         {/*  */}
         <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
-            <img
-              className="h-72 w-full"
-              src="/images/batman.jpg"
-              alt="product image"
-            />
+          <img
+            className="h-72 w-full"
+            src="/images/batman.jpg"
+            alt="product image"
+          />
           <div className="px-5 pb-5">
-              <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-                 Bat Man Toy
-              </h5>
+            <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
+              Bat Man Toy
+            </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
@@ -144,9 +137,7 @@ const Galaries = () => {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 $79
               </span>
-              <button
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Buy Now
               </button>
             </div>
@@ -154,15 +145,15 @@ const Galaries = () => {
         </div>
         {/*  */}
         <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
-            <img
-              className="h-72 w-full"
-              src="/images/superman1.webp"
-              alt="product image"
-            />
+          <img
+            className="h-72 w-full"
+            src="/images/superman1.webp"
+            alt="product image"
+          />
           <div className="px-5 pb-5">
-              <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-                 Super Man Toy
-              </h5>
+            <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
+              Super Man Toy
+            </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
@@ -222,9 +213,7 @@ const Galaries = () => {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 $120
               </span>
-              <button
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Buy Now
               </button>
             </div>
@@ -232,15 +221,15 @@ const Galaries = () => {
         </div>
         {/*  */}
         <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
-            <img
-               className="h-72 w-full"
-              src="/images/spiderman.webp"
-              alt="product image"
-            />
+          <img
+            className="h-72 w-full"
+            src="/images/spiderman.webp"
+            alt="product image"
+          />
           <div className="px-5 pb-5">
-              <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-                 Spider Man Toy
-              </h5>
+            <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
+              Spider Man Toy
+            </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
@@ -300,9 +289,7 @@ const Galaries = () => {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 $150
               </span>
-              <button
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Buy Now
               </button>
             </div>
@@ -310,15 +297,15 @@ const Galaries = () => {
         </div>
         {/*  */}
         <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
-            <img
-               className="h-72 w-full"
-              src="/images/hulk.jpeg"
-              alt="product image"
-            />
+          <img
+            className="h-72 w-full"
+            src="/images/hulk.jpeg"
+            alt="product image"
+          />
           <div className="px-5 pb-5">
-              <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-                Hulk Toy
-              </h5>
+            <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
+              Hulk Toy
+            </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
@@ -368,9 +355,7 @@ const Galaries = () => {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 $133
               </span>
-              <button
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Buy Now
               </button>
             </div>
@@ -378,15 +363,15 @@ const Galaries = () => {
         </div>
         {/*  */}
         <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
-            <img
-               className="h-72 w-full"
-              src="/images/deadpool.jpg"
-              alt="product image"
-            />
+          <img
+            className="h-72 w-full"
+            src="/images/deadpool.jpg"
+            alt="product image"
+          />
           <div className="px-5 pb-5">
-              <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-                DeadPool Toy
-              </h5>
+            <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
+              DeadPool Toy
+            </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
@@ -446,13 +431,51 @@ const Galaries = () => {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 $100
               </span>
-              <button
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Buy Now
               </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="grid gap-6  mt-12 grid-cols-1  lg:grid-cols-2">
+        <div className="h-64">
+          <Carousel>
+            <img
+              className="h-full w-full"
+              src="../../../public/images/ironman.jpg"
+              alt="..."
+            />
+            <img
+              className="h-full w-full"
+              src="../../../public/images/spiderman.webp"
+              alt="..."
+            />
+            <img
+              className="h-full w-full"
+              src="../../../public/images/superman1.webp"
+              alt="..."
+            />
+          </Carousel>
+        </div>
+        <div className="h-64">
+          <Carousel>
+            <img
+              className="h-full w-full"
+              src="../../../public/images/batman.jpg"
+              alt="..."
+            />
+            <img
+              className="h-full w-full"
+              src="../../../public/images/deadpool.jpg"
+              alt="..."
+            />
+            <img
+              className="h-full w-full"
+              src="../../../public/images/hulk.jpeg"
+              alt="..."
+            />
+          </Carousel>
         </div>
       </div>
     </div>
