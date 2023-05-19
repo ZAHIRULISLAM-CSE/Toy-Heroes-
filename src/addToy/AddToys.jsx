@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import Swal from 'sweetalert2'
 import { AuthContext } from "../providers/AuthProviders";
+import { Footer } from "flowbite-react";
 
 const AddToys = () => {
   const [selectedOption, setSelectedOption] = useState("Avengers");
