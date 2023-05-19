@@ -1,11 +1,39 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
   const { user } = useContext(AuthContext);
   const email = user?.email;
+
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/delete/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount) {
+              Swal.fire("Deleted!", "Your toy has been deleted.", "success");
+            }
+            const remainingToys=myToys.filter(toy => toy._id !=id)
+            setMyToys(remainingToys);
+          });
+      }
+    });
+  };
+
   useEffect(() => {
     fetch(`http://localhost:5000/toy/${email}`)
       .then((res) => res.json())
@@ -28,31 +56,31 @@ const MyToys = () => {
                   Toy Name
                 </th>
                 <th scope="col" className="px-6 py-3">
-                 Seller Name
+                  Seller Name
                 </th>
                 <th scope="col" className="px-6 py-3">
-                 Seller Email
+                  Seller Email
                 </th>
                 <th scope="col" className="px-6 py-3">
                   Catagory
                 </th>
                 <th scope="col" className="px-6 py-3">
-                 Price
+                  Price
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Ratings
+                  Ratings
                 </th>
                 <th scope="col" className="px-6 py-3">
-                   Quantity
+                  Quantity
                 </th>
                 <th scope="col" className="px-6 py-3">
-                 Description
+                  Description
                 </th>
                 <th scope="col" className="px-6 py-3">
-                 Update
+                  Update
                 </th>
                 <th scope="col" className="px-6 py-3">
-                 Delete
+                  Delete
                 </th>
               </tr>
             </thead>
@@ -63,11 +91,12 @@ const MyToys = () => {
                     key={singleToy._id}
                     className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
                   >
-                    <th
-                      scope="row"
-                      className="px-6 py-4"
-                    >
-                     <img className="h-8 w-8 rounded-full" src={singleToy.toyPhoto} alt="" />
+                    <th scope="row" className="px-6 py-4">
+                      <img
+                        className="h-8 w-8 rounded-full"
+                        src={singleToy.toyPhoto}
+                        alt=""
+                      />
                     </th>
                     <td className="px-6 py-4">{singleToy.toyName}</td>
                     <td className="px-6 py-4">{user?.displayName}</td>
@@ -85,9 +114,12 @@ const MyToys = () => {
                       </Link>
                     </td>
                     <td>
-                        <button className="bg-blue-600  px-2 lg:py-1 rounded-xl text-sm font-semibold text-white ">
-                         Delete
-                        </button>
+                      <button
+                        onClick={() => handleDelete(singleToy._id)}
+                        className="bg-blue-600  px-2 lg:py-1 rounded-xl text-sm font-semibold text-white "
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 ))}
