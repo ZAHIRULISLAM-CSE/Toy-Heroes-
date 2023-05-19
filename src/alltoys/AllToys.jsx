@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import { Link } from "react-router-dom";
+import useTitle from "../customHooks/useTitle";
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
   const [status,setStatus]=useState("")
+
+  useTitle("Toy Heros | All Toys")
 
   useEffect(() => {
     fetch("http://localhost:5000/alltoys")

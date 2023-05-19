@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import Swal from 'sweetalert2'
 import { AuthContext } from "../providers/AuthProviders";
+import useTitle from "../customHooks/useTitle";
 
 const AddToys = () => {
   const [selectedOption, setSelectedOption] = useState("Avengers");
 
+  useTitle("Toy Heros | Add Toys")
 
   const { user } = useContext(AuthContext);
 

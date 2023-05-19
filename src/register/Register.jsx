@@ -3,11 +3,13 @@ import { AuthContext } from "../providers/AuthProviders";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
+import useTitle from "../customHooks/useTitle";
 
 const Register = () => {
     const [error,setError]=useState(null);
     const {creatUserWithEmailPassword,logOut}=useContext(AuthContext);
     const navigate=useNavigate();
+    useTitle("Toy Heros | Register")
     const handleSubmit=(event)=>{
         event.preventDefault();
         const name=event.target.name.value;

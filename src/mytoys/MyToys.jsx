@@ -3,12 +3,14 @@ import { AuthContext } from "../providers/AuthProviders";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Dropdown } from "flowbite-react";
+import useTitle from "../customHooks/useTitle";
 
 const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
-  const [sortValue,setSortValue]=useState(null);
   const { user } = useContext(AuthContext);
   const email = user?.email;
+
+  useTitle("Toy Heros | My Toys")
 
   const handleDelete = (id) => {
     Swal.fire({

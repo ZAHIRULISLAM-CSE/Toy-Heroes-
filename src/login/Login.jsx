@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
+import useTitle from "../customHooks/useTitle";
 
 const Login = () => {
   const [error, setError] = useState(null);
@@ -10,6 +11,8 @@ const Login = () => {
   const location=useLocation();
   console.log(location);
   const state=location?.state || "/"
+
+  useTitle("Toy Heros | Login")
 
 
   const handleLogin = (event) => {

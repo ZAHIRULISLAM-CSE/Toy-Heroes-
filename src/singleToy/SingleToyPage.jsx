@@ -1,7 +1,9 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../customHooks/useTitle";
 
 const SingleToyPage = () => {
+  useTitle("Toy Heros | Toy Details")
   const data = useLoaderData();
   console.log(data);
   console.log(data[0].toyPhoto);
