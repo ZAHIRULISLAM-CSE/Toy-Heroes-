@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Dropdown } from "flowbite-react";
 
 const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
+  const [sortValue,setSortValue]=useState(null);
   const { user } = useContext(AuthContext);
   const email = user?.email;
 
@@ -27,7 +29,7 @@ const MyToys = () => {
             if (data.deletedCount) {
               Swal.fire("Deleted!", "Your toy has been deleted.", "success");
             }
-            const remainingToys=myToys.filter(toy => toy._id !=id)
+            const remainingToys = myToys.filter((toy) => toy._id != id);
             setMyToys(remainingToys);
           });
       }
@@ -42,8 +44,29 @@ const MyToys = () => {
       });
   }, [email]);
 
+  const handleSort=(sortValue)=>{
+    fetch(`http://localhost:5000/toy/${email}?price=${sortValue}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setMyToys(data);
+    });
+  }
+
+       
   return (
-    <div className="w-[90%] mx-auto">
+    <div className="w-[95%] mx-auto">
+      <div className="mt-16 flex justify-center">
+        <Dropdown label="Sort By Price">
+          <Dropdown.Header>
+            <span className="block text-sm">{user?.displayName}</span>
+            <span className="block truncate text-sm font-medium">
+            {user?.email}
+            </span>
+          </Dropdown.Header>
+          <Dropdown.Item   onClick={()=>handleSort("asc")} >Ascending</Dropdown.Item>
+          <Dropdown.Item  onClick={()=>handleSort("des")}  >Decending</Dropdown.Item>
+        </Dropdown>
+      </div>
       <div className=" mt-12 lg:mt-16">
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500">
