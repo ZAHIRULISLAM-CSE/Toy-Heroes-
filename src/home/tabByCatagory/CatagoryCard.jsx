@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-import {useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
 
-const Avengers = (props) => {
+const CatagoryCard = (props) => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-  const location=useLocation();
-  console.log(location)
+
 
   const handleViweDetails = (id) => {
     if (!user) {
@@ -42,8 +41,8 @@ const Avengers = (props) => {
           />
           <figcaption className="absolute px-4 text-lg text-white bottom-6">
             <p>{toyName}</p>
-            <p>Price:${toyPrice}</p>
-            <p>Ratings:{toyRatings}</p>
+            <p>Price: ${toyPrice}</p>
+            <p>Ratings: {toyRatings}</p>
               <button
                 onClick={() => handleViweDetails(_id)}
                 className="bg-blue-600 mt-1 text-sm rounded-xl px-1 py-2"
@@ -57,4 +56,4 @@ const Avengers = (props) => {
   );
 };
 
-export default Avengers;
+export default CatagoryCard ;
