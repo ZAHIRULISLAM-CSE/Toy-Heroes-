@@ -5,7 +5,7 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-
 
 const Footers = () => {
   return (
-    <div>
+    <div className="mt-16">
       <Footer bgDark={true}>
         <div className="w-full">
           <div className="grid w-full grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">

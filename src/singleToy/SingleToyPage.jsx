@@ -32,7 +32,7 @@ const SingleToyPage = () => {
           </p>
         </div>
         <img
-          className="object-cover flex-1 w-full h-370px  md:h-[450px]  md:w-96 lg:w-[500px] md:rounded-none"
+          className=" flex-1 w-full h-370px  md:h-[450px]  md:w-96 lg:w-[500px] md:rounded-none"
           src={data[0].toyPhoto}
           alt=""
         />

@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import Swal from 'sweetalert2'
 import { AuthContext } from "../providers/AuthProviders";
-import { Footer } from "flowbite-react";
 
 const AddToys = () => {
   const [selectedOption, setSelectedOption] = useState("Avengers");
@@ -156,6 +155,7 @@ const AddToys = () => {
               type="number"
               min={0}
               max={5}
+              step="0.01"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
           </div>
@@ -186,7 +186,7 @@ const AddToys = () => {
             />
           </div>
         </div>
-        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Add Toy</button>
       </form>
     </div>
   );
