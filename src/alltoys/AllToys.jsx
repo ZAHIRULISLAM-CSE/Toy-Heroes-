@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
   const [status,setStatus]=useState("")
-  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("http://localhost:5000/alltoys")
@@ -125,7 +124,7 @@ const AllToys = () => {
                       scope="row"
                       className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
-                      {user?.displayName}
+                      {singleToy.sellerName}
                     </th>
                     <td className="px-6 py-4">{singleToy.toyName}</td>
                     <td className="px-6 py-4">{singleToy.toyCatagory}</td>

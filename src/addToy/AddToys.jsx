@@ -138,7 +138,8 @@ const AddToys = () => {
             </label>
             <input
               name="toyPrice"
-              type="text"
+              type="number"
+              min={1}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
           </div>
@@ -147,11 +148,13 @@ const AddToys = () => {
           
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Toy Ratings*
+              Toy Ratings(0-5)*
             </label>
             <input
                 name="toyRatings"
-              type="text"
+              type="number"
+              min={0}
+              max={5}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
           </div>
@@ -164,7 +167,8 @@ const AddToys = () => {
             </label>
             <input
             name="toyQuantity"
-              type="text"
+              type="number"
+              min={0}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
           </div>

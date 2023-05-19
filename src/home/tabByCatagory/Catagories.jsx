@@ -5,7 +5,7 @@ import "react-tabs/style/react-tabs.css";
 const Catagories = () => {
   return (
     <div className="w-[85%] mx-auto mt-20 ">
-        <h1 className="text-center font-bold  mb-12 text-3xl ">Toy Catagories</h1>
+        <h1 className="text-center font-bold  mb-12 text-3xl ">Shop by category</h1>
       <Tabs>
         <TabList className='text-xl flex justify-between font-semibold'>
           <Tab>Avengers</Tab>
