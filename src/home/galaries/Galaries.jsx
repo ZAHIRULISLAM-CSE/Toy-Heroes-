@@ -3,10 +3,10 @@ import React from "react";
 
 const Galaries = () => {
   return (
-    <div className="w-[85%] mx-auto">
-      <h1 className="text-center font-bold text-4xl mt-16">Gallery</h1>
+    <div  className="w-[85%] mx-auto">
+      <h1  className="text-center font-bold text-4xl mt-16">Gallery</h1>
       <div className="mt-12 gap-6 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
-        <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
+        <div data-aos="zoom-in" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
           <img className="h-72" src="/images/ironman.jpg" alt="product image" />
           <div className="px-5 pb-5">
             <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -71,14 +71,14 @@ const Galaries = () => {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 $99
               </span>
-              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <button  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Buy Now
               </button>
             </div>
           </div>
         </div>
         {/*  */}
-        <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
+        <div data-aos="zoom-in" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
           <img
             className="h-72 w-full"
             src="/images/batman.jpg"
@@ -144,7 +144,7 @@ const Galaries = () => {
           </div>
         </div>
         {/*  */}
-        <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
+        <div data-aos="zoom-in" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
           <img
             className="h-72 w-full"
             src="/images/superman1.webp"
@@ -220,7 +220,7 @@ const Galaries = () => {
           </div>
         </div>
         {/*  */}
-        <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
+        <div data-aos="zoom-out" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
           <img
             className="h-72 w-full"
             src="/images/spiderman.webp"
@@ -296,7 +296,7 @@ const Galaries = () => {
           </div>
         </div>
         {/*  */}
-        <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
+        <div data-aos="zoom-out" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
           <img
             className="h-72 w-full"
             src="/images/hulk.jpeg"
@@ -362,7 +362,7 @@ const Galaries = () => {
           </div>
         </div>
         {/*  */}
-        <div className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
+        <div data-aos="zoom-out" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
           <img
             className="h-72 w-full"
             src="/images/deadpool.jpg"

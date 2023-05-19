@@ -26,7 +26,7 @@ const Catagories = () => {
         </TabList>
 
         <TabPanel className="mt-12">
-          <h1 className="text-center text-pink-500 text-3xl font-bold">Our Avengers Collection</h1>
+          <h1 data-aos="fade-up"  className="text-center  text-pink-500 text-3xl font-bold">Our Avengers Collection</h1>
           <div className="grid gap-6  grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
             {
                 tabData.map(singleData =><CatagoryCard key={singleData._id} data={singleData} ></CatagoryCard>)
@@ -34,7 +34,7 @@ const Catagories = () => {
           </div>
         </TabPanel>
         <TabPanel className="mt-12">
-        <h1 className="text-center text-pink-500 text-3xl font-bold">Our StarWars Collection</h1>
+        <h1 data-aos="fade-up"  className="text-center text-pink-500 text-3xl font-bold">Our StarWars Collection</h1>
           <div className="grid gap-6  grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
               {
                 tabData.map(singleData =><CatagoryCard key={singleData._id} data={singleData} ></CatagoryCard>)
@@ -42,7 +42,7 @@ const Catagories = () => {
           </div>
         </TabPanel>
         <TabPanel className="mt-12">
-        <h1 className="text-center text-pink-500 text-3xl font-bold">Our Transformers Collection</h1>
+        <h1 data-aos="fade-up"  className="text-center text-pink-500 text-3xl font-bold">Our Transformers Collection</h1>
           <div className="grid gap-6  grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
                {
                 tabData.map(singleData =><CatagoryCard key={singleData._id} data={singleData} ></CatagoryCard>)

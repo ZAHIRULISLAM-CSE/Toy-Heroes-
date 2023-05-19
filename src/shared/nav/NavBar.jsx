@@ -21,8 +21,8 @@ const NavBar = () => {
       <nav className="bg-black p-8 text-white py-5">
         <div className="flex flex-wrap items-center justify-between mx-auto">
           <Link to="/" className="flex items-center">
-            <img src={logo} className="h-8 mr-3" alt="Flowbite Logo" />
-            <span className="self-center text- text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <img  src={logo} className="h-8 mr-3" alt="Flowbite Logo" />
+            <span  data-aos="fade-up" className="self-center text- text-2xl font-semibold whitespace-nowrap dark:text-white">
               Toy <span className="text-pink-600">H</span>
               <span className="text-red-600">E</span>
               <span className="text-orange-600">R</span>
