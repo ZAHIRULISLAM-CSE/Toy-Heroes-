@@ -3,7 +3,7 @@ import React from 'react';
 const ToyComparison = () => {
   return (
     <section className="bg-gray-100 mt-20 py-8">
-      <div className="container mx-auto px-4">
+      <div className="w-[85%] mx-auto px-4">
         <h2 className="text-3xl text-center mb-16 font-bold">Best Sold Toy Comparison</h2>
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-300">
