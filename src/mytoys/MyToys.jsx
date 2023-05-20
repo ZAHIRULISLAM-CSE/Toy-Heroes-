@@ -23,7 +23,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://toy-heros-server.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -39,7 +39,7 @@ const MyToys = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toy/${email}`)
+    fetch(`https://toy-heros-server.vercel.app/toy/${email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -47,7 +47,7 @@ const MyToys = () => {
   }, [email]);
 
   const handleSort=(sortValue)=>{
-    fetch(`http://localhost:5000/toy/${email}?price=${sortValue}`)
+    fetch(`https://toy-heros-server.vercel.app/toy/${email}?price=${sortValue}`)
     .then((res) => res.json())
     .then((data) => {
       setMyToys(data);

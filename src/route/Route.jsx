@@ -42,7 +42,7 @@ import Blogs from '../blog/Blogs';
         {
           path: "/toy/:id",
           element:<PrivateRoute><SingleToyPage></SingleToyPage></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params})=>fetch(`https://toy-heros-server.vercel.app/toys/${params.id}`)
         },
         {
           path: "/mytoys",
@@ -51,7 +51,7 @@ import Blogs from '../blog/Blogs';
         {
           path: "/update/:id",
           element:<UpdateMyToys></UpdateMyToys>,
-          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params})=>fetch(`https://toy-heros-server.vercel.app/toys/${params.id}`)
         },
         {
           path: "/blogs",

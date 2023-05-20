@@ -10,7 +10,7 @@ const AllToys = () => {
   useTitle("Toy Heros | All Toys")
 
   useEffect(() => {
-    fetch("http://localhost:5000/alltoys")
+    fetch("https://toy-heros-server.vercel.app/alltoys")
       .then((res) => res.json())
       .then((data) => {
         setStatus("")
@@ -22,7 +22,7 @@ const AllToys = () => {
     const handleSearch=(event)=>{
             event.preventDefault();
             const text=event.target.search.value;
-            fetch(`http://localhost:5000/searchToys/${text}`)
+            fetch(`https://toy-heros-server.vercel.app/searchToys/${text}`)
             .then(res => res .json())
             .then(data =>{
                 setAllToys(data);

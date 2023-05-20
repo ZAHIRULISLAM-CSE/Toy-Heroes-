@@ -8,7 +8,7 @@ const Catagories = () => {
   const [tabData,setTabData]=useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/catagory/${select}`)
+    fetch(`https://toy-heros-server.vercel.app/catagory/${select}`)
       .then((res) => res.json())
       .then((data) => {
         setTabData(data)

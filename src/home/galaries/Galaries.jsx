@@ -443,17 +443,17 @@ const Galaries = () => {
           <Carousel>
             <img
               className="h-full w-full"
-              src="../../../public/images/ironman.jpg"
+              src="/images/ironman.jpg"
               alt="..."
             />
             <img
               className="h-full w-full"
-              src="../../../public/images/spiderman.webp"
+              src="/images/spiderman.webp"
               alt="..."
             />
             <img
               className="h-full w-full"
-              src="../../../public/images/superman1.webp"
+              src="/images/superman1.webp"
               alt="..."
             />
           </Carousel>
@@ -462,17 +462,17 @@ const Galaries = () => {
           <Carousel>
             <img
               className="h-full w-full"
-              src="../../../public/images/batman.jpg"
+              src="/images/batman.jpg"
               alt="..."
             />
             <img
               className="h-full w-full"
-              src="../../../public/images/deadpool.jpg"
+              src="/images/deadpool.jpg"
               alt="..."
             />
             <img
               className="h-full w-full"
-              src="../../../public/images/hulk.jpeg"
+              src="/images/hulk.jpeg"
               alt="..."
             />
           </Carousel>

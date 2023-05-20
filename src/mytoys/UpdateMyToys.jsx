@@ -19,10 +19,10 @@ const UpdateMyToys = () => {
             toyPrice,toyQuantity,toyDescription,id
         }
 
-        fetch("http://localhost:5000/update",{
-            method:"PUT",
+        fetch("https://toy-heros-server.vercel.app/update",{
+            method:"PATCH",
             headers:{
-                "content-type":"application/json"
+              "content-type":"application/json"
             },
             body:JSON.stringify(updatedData)
         })
