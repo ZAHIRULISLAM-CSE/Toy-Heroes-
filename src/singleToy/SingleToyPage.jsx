@@ -29,7 +29,7 @@ const SingleToyPage = () => {
           <p className=" text-pink-600  mt-3 font-medium inline-flex items-center gap-3">
            Quantity Avliable:{data[0].toyQuantity}
           </p>
-          <p className=" mb-8 text-pink-600  mt-3 font-medium inline-flex items-center gap-3">
+          <p className=" mb-8 text-pink-600 text-xs  mt-3 font-medium inline-flex items-center gap-3">
            Description:{data[0].toyDescription}
           </p>
         </div>
