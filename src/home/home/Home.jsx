@@ -3,6 +3,7 @@ import Banner from '../banner/Banner';
 import Galaries from '../galaries/Galaries';
 import Catagories from '../tabByCatagory/Catagories';
 import useTitle from '../../customHooks/useTitle';
+import ToyComparison from '../toycompare/ToyComparision';
 
 const Home = () => {
     useTitle("Toy Heros")
@@ -11,6 +12,7 @@ const Home = () => {
            <Banner></Banner>
            <Galaries></Galaries>
            <Catagories></Catagories>
+           <ToyComparison></ToyComparison>
         </div>
     );
 };
