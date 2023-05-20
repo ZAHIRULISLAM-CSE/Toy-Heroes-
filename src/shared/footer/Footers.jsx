@@ -29,11 +29,11 @@ const Footers = () => {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="legal" />
+              <Footer.Title title="Office Address" />
               <Footer.LinkGroup col={true}>
-                <Footer.Link >Privacy Policy</Footer.Link>
-                <Footer.Link >Licensing</Footer.Link>
-                <Footer.Link>Terms & Conditions</Footer.Link>
+                <Footer.Link >Rajshahi</Footer.Link>
+                <Footer.Link >BinodPur</Footer.Link>
+                <Footer.Link>Bangladesh</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
