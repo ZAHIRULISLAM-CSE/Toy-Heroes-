@@ -36,7 +36,7 @@ const UpcomingToys = () => {
             <Timeline.Body>
             One of the key features of Optimus Prime toys is their ability to transform between different modes. Typically, they can transform from a robot mode to a vehicle mode, such as a truck or a futuristic vehicle. This transformation feature allows for dynamic play and adds an element of excitement and versatility to the toy.Optimus Prime toys often have multiple points of articulation, including movable limbs, head, and sometimes even finger articulation. This allows for various poses and dynamic action scenes, giving children and collectors the opportunity to create their own adventures with the toy.
             </Timeline.Body>
-            <img className="w-full h-[70vh]" src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22433522/Screen_Shot_2021_04_09_at_5.15.22_PM.png" alt="" />
+            <img className="w-full h-[70vh]" src="https://media.wired.com/photos/59330baf26780e6c04d2e33b/master/w_2560%2Cc_limit/Transformers-autobots.jpg" alt="" />
           </Timeline.Content>
         </Timeline.Item>
       </Timeline>
