@@ -7,15 +7,15 @@ const Galaries = () => {
       <h1  className="text-center font-bold text-4xl mt-16">Gallery</h1>
       <div className="mt-12 gap-6 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
         <div data-aos="zoom-in" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
-          <img className="h-72" src="/images/ironman.jpg" alt="product image" />
+          <img className="h-72 w-full" src="https://cdn11.bigcommerce.com/s-csqcv5l47s/images/stencil/804x804/products/1219/3273/Marvel_UnmaskedIronMan_Gallery_03__19712.1628726427.jpg?c=1" alt="product image" />
           <div className="px-5 pb-5">
             <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-              Iron Man Toy
+            FIGLot ZD Toys Iron Man Mark 5 Mark V 7" Action Figure
             </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,12 +86,12 @@ const Galaries = () => {
           />
           <div className="px-5 pb-5">
             <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-              Bat Man Toy
+            DC Comics Batman 12-inch Rebirth Action Figure, Kids Toys for Boys Aged 3 and up.
             </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -152,12 +152,12 @@ const Galaries = () => {
           />
           <div className="px-5 pb-5">
             <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-              Super Man Toy
+            McFarlane Toys DC Multiverse The Dark Knight Returns Superman 7" Action Figure
             </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +167,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -228,12 +228,12 @@ const Galaries = () => {
           />
           <div className="px-5 pb-5">
             <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-              Spider Man Toy
+            Marvel Legends Series Retro 375 Collection Spider-Man 3.75-Inch Collectible Action Figures
             </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +243,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +253,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +263,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -304,12 +304,12 @@ const Galaries = () => {
           />
           <div className="px-5 pb-5">
             <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-              Hulk Toy
+            Marvel Avengers Titan Hero Series Blast Gear Deluxe Hulk Action Figure
             </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -319,7 +319,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -329,7 +329,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -339,7 +339,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -365,17 +365,17 @@ const Galaries = () => {
         <div data-aos="zoom-out" className="w-full max-w-sm bg-[#E5E7EB] rounded-2xl">
           <img
             className="h-72 w-full"
-            src="/images/deadpool.jpg"
+            src="/images/deadpoolnew.jpg"
             alt="product image"
           />
           <div className="px-5 pb-5">
             <h5 className="text-xl mt-4 font-semibold tracking-tight text-gray-900 dark:text-white">
-              DeadPool Toy
+            Marvel Classics 1/2 Scale Action Figure - Deadpool
             </h5>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -385,7 +385,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +395,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +405,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -415,7 +415,7 @@ const Galaries = () => {
               </svg>
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-yellow-300"
+                className="w-5 h-5 text-blue-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -443,7 +443,7 @@ const Galaries = () => {
           <Carousel>
             <img
               className="h-full w-full"
-              src="/images/ironman.jpg"
+              src="/images/deadpoolnew.jpg"
               alt="..."
             />
             <img
@@ -467,7 +467,7 @@ const Galaries = () => {
             />
             <img
               className="h-full w-full"
-              src="/images/deadpool.jpg"
+              src="https://cdn11.bigcommerce.com/s-csqcv5l47s/images/stencil/804x804/products/1219/3273/Marvel_UnmaskedIronMan_Gallery_03__19712.1628726427.jpg?c=1"
               alt="..."
             />
             <img
