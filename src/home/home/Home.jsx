@@ -6,6 +6,7 @@ import useTitle from '../../customHooks/useTitle';
 import ToyComparison from '../toycompare/ToyComparision';
 import UpcomingToys from '../upcomingtoys/UpcomingToys';
 import FuturePlan from './futureplan/FuturePlan';
+import CustomerRatings from '../ratings/CustomerRatings';
 
 const Home = () => {
     useTitle("Toy Heros")
@@ -17,6 +18,7 @@ const Home = () => {
            <ToyComparison></ToyComparison>
            <UpcomingToys></UpcomingToys>
            <FuturePlan></FuturePlan>
+           <CustomerRatings></CustomerRatings>
         </div>
     );
 };
