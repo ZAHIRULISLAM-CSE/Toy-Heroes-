@@ -4,7 +4,7 @@ import React from "react";
 const FuturePlan = () => {
   return (
     <div className="mt-20 w-[85%] mx-auto ">
-        <h1 className="text-3xl mb-16   text-center">Our Future Plan About Toy</h1>
+        <h1 className="text-3xl mb-16  font-bold  text-center">Our Future Plan About Toy</h1>
       <Timeline horizontal={true}>
         <Timeline.Item>
           <Timeline.Point/>

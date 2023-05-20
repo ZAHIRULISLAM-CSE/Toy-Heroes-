@@ -4,7 +4,7 @@ import React from "react";
 const CustomerRatings = () => {
   return (
     <div className="mt-20 w-[85%]  mx-auto">
-      <h1 className="text-3xl text-center mb-12">Customers Feedback For Us</h1>
+      <h1 className="text-3xl font-bold text-center mb-12">Customers Feedback For Us</h1>
       <div className="">
         <React.Fragment>
           <Rating className="mb-4">
@@ -18,7 +18,7 @@ const CustomerRatings = () => {
             </p>
           </Rating>
           <p className="text-sm mb-4 font-medium text-gray-500 dark:text-gray-400">
-            1,745 global ratings
+            1,70045 global ratings
           </p>
           <Rating.Advanced className="my-2" percentFilled={75}>
             5 star
