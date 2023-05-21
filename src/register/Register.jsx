@@ -33,7 +33,7 @@ const Register = () => {
             update(user,name,photo);
             setError(null);
             logOut()
-            navigate("/login")  
+            navigate("/login",{replace:true})  
           })
           .catch((error) => {
             const errorMessage = error.message;

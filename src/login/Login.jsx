@@ -20,7 +20,7 @@ const Login = () => {
     signInWithEp(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigate(state);
+        navigate(state,{replace:true});
       })
       .catch((error) => {
         setError("Please Provide Valid Email and Password");
@@ -32,7 +32,7 @@ const Login = () => {
             signInWithGoogle()
             .then((result) => {
                 const user = result.user;
-                navigate(state);
+                navigate(state,{replace:true});
               }).catch((error) => {
                 const errorMessage = error.message;
                 setError(errorMessage);

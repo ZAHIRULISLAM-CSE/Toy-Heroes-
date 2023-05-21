@@ -11,7 +11,7 @@ const NavBar = () => {
   const handleSignOut = () => {
     logOut()
       .then(() => {
-        navigate("/");
+        navigate("/",{replace:true});
       })
       .catch((error) => {});
   };
