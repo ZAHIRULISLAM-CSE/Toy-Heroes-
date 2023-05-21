@@ -47,6 +47,15 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link
+                    to="/blogs"
+                    className="block py-2 pl-3 pr-4 text-white md:p-0"
+                    aria-current="page"
+                  >
+                    Blogs
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/alltoys"
                     className="block py-2 pl-3 pr-4 text-white md:p-0"
                     aria-current="page"
@@ -70,15 +79,6 @@ const NavBar = () => {
                     aria-current="page"
                   >
                     Add a Toy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/blogs"
-                    className="block py-2 pl-3 pr-4 text-white md:p-0"
-                    aria-current="page"
-                  >
-                    Blogs
                   </Link>
                 </li>
                 <div className="group  p-4 md:p-0 flex relative">
@@ -116,6 +116,15 @@ const NavBar = () => {
                     aria-current="page"
                   >
                     All Toys
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/blogs"
+                    className="block py-2 pl-3 pr-4 text-white md:p-0"
+                    aria-current="page"
+                  >
+                    Blogs
                   </Link>
                 </li>
                 <li>
