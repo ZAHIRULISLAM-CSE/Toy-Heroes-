@@ -33,7 +33,7 @@ import Blogs from '../blog/Blogs';
         },
         {
           path: "/addtoys",
-          element:<AddToys></AddToys>
+          element:<PrivateRoute><AddToys></AddToys></PrivateRoute>
         },
         {
           path: "/alltoys",
@@ -46,7 +46,7 @@ import Blogs from '../blog/Blogs';
         },
         {
           path: "/mytoys",
-          element:<MyToys></MyToys>
+          element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
         {
           path: "/update/:id",
