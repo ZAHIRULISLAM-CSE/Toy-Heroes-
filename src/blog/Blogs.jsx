@@ -3,7 +3,7 @@ import useTitle from "../customHooks/useTitle";
 
 const Blogs = () => {
 
-    useTitle("Toy Heros | Blogs")
+    useTitle("Toy Heroes | Blogs")
   return (
     <div className="w-[85%] mx-auto mt-12">
       <div className="bg-gray-200 mb-5 p-4">

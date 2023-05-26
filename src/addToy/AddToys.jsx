@@ -6,7 +6,7 @@ import useTitle from "../customHooks/useTitle";
 const AddToys = () => {
   const [selectedOption, setSelectedOption] = useState("Avengers");
 
-  useTitle("Toy Heros | Add Toys")
+  useTitle("Toy Heroes | Add Toys")
 
   const { user } = useContext(AuthContext);
 

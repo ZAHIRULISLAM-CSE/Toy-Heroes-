@@ -5,7 +5,7 @@ import useTitle from "../customHooks/useTitle";
 
 const UpdateMyToys = () => {
 
-  useTitle("Toy Heros | Update")
+  useTitle("Toy Heroes | Update")
 
   const data = useLoaderData();
   const id =data[0]._id;

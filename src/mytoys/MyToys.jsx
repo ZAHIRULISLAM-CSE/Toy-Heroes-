@@ -10,7 +10,7 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const email = user?.email;
 
-  useTitle("Toy Heros | My Toys")
+  useTitle("Toy Heroes | My Toys")
 
   const handleDelete = (id) => {
     Swal.fire({

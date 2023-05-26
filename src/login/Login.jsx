@@ -11,7 +11,7 @@ const Login = () => {
   const location=useLocation();
   console.log(location);
   const state=location?.state || "/"
-  useTitle("Toy Heros | Login")
+  useTitle("Toy Heroes | Login")
   const handleLogin = (event) => {
     event.preventDefault();
     const email = event.target.email.value;

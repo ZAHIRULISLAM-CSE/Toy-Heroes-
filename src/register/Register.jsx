@@ -9,7 +9,7 @@ const Register = () => {
     const [error,setError]=useState(null);
     const {creatUserWithEmailPassword,logOut}=useContext(AuthContext);
     const navigate=useNavigate();
-    useTitle("Toy Heros | Register")
+    useTitle("Toy Heroes | Register")
     const handleSubmit=(event)=>{
         event.preventDefault();
         const name=event.target.name.value;

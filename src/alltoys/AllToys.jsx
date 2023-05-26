@@ -7,7 +7,7 @@ const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
   const [status,setStatus]=useState("")
 
-  useTitle("Toy Heros | All Toys")
+  useTitle("Toy Heroes | All Toys")
 
   useEffect(() => {
     fetch("https://toy-heros-server.vercel.app/alltoys")

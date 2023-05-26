@@ -9,7 +9,7 @@ import FuturePlan from './futureplan/FuturePlan';
 import CustomerRatings from '../ratings/CustomerRatings';
 
 const Home = () => {
-    useTitle("Toy Heros")
+    useTitle("Toy Heroes")
     return (
         <div>
            <Banner></Banner>
